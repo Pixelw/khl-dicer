@@ -20,9 +20,11 @@ def judge1(dice, v_max):
 
 
 def ra(sender: str, skill: str, v_max: int) -> str:
+    if v_max > 100 or v_max < 0:
+        return ""
     dice = random.randint(1, 100)
     result = judge1(dice, v_max)
-    return f'【{sender}】【{skill}】结果：1d100={dice}/{v_max} {result}'
+    return f'结果：1d100={dice}/{v_max} {result}'
 
 
 def r(sender: str, count: int, dice: int) -> str:
@@ -32,9 +34,10 @@ def r(sender: str, count: int, dice: int) -> str:
         s = random.randint(1, dice)
         result.append(s)
         _sum += s
-    return f'【{sender}】r{count}d{dice}: {result.__str__()}={_sum}'
+    return f'r{count}d{dice}: {result.__str__()}={_sum}'
 
 
+# test
 if __name__ == '__main__':
     print(judge1(45, 45))
     for i in range(1, 10):
