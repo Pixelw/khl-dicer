@@ -2,7 +2,7 @@ from khl import Bot, Message
 
 import dicer
 import secret
-from util.logger import set_logger
+from logger import set_logger
 
 bot = Bot(token=secret.khl_token)
 
