@@ -3,3 +3,5 @@
 /.idea
 /bot_logs
 /dialog_logs
+/__pycache__
+
